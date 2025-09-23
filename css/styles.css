@@ -1,0 +1,98 @@
+/* 
+  Універсальний селектор
+  Селектор тега
+  Селектор id
+  Селектор класа
+  Селектор нащадка
+  Дочірній селектор
+*/
+
+/* Універсальний селектор */
+/* 
+* {
+  color: teal;
+} 
+*/
+
+/* Селектор тега */
+/* h1 {
+  color: teal;
+}
+
+p {
+  color: tomato;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+} */
+
+/* Селектор id */
+/* #first-description,
+#second-description {
+  color: teal;
+} */
+
+/* Селектор класа */
+/* 
+.description {
+  color: teal;
+} 
+*/
+
+/* Селектор нащадка */
+/* .section-title {
+  font-size: 32px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.first-section .section-title {
+  color: teal;
+}
+
+.second-section .section-title {
+  color: tomato;
+} */
+
+/* Дочірній селектор */
+/* .menu > .menu-item {
+  border: 1px solid red;
+} */
+
+/* 10 */
+/* .page-title {
+  color: teal;
+} */
+
+/* 100 */
+/* #main-title {
+  color: aqua;
+} */
+
+/* 1 */
+/* h1 {
+  color: yellowgreen;
+} */
+
+/* 11 */
+/* body .page-title {
+  color: pink;
+} */
+
+.page-title {
+  color: yellowgreen;
+}
+
+body {
+  color: teal;
+}
+
+a {
+  color: inherit;
+}
