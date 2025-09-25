@@ -57,10 +57,13 @@ ol {
 .benefits-list {
   display: flex;
   flex-direction: row;
-  gap: 20px;
-
-  /* row-gap: ;
-  column-gap: ; */
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  /* row-gap: 20px;
+  column-gap: 20px; */
+  /* gap: 40px 20px; */
 
   height: 300px;
 
@@ -69,5 +72,21 @@ ol {
 
 .benefits-list-item {
   width: 300px;
+
   border: 1px solid tomato;
+}
+
+.benefits-list-item-first {
+}
+
+.benefits-list-item-second {
+}
+
+.benefits-list-item-third {
+}
+
+.block {
+  width: 100px;
+  height: 100px;
+  border: 2px solid teal;
 }
