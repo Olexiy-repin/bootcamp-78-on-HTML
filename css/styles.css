@@ -79,10 +79,17 @@ body {
 /* ================ /COMMON STYLES ================ */
 
 /* ================ PAGE HEADER STYLES ================ */
+.page-header-container {
+  display: flex;
+  align-items: center;
+  column-gap: 90px;
+}
+
 .page-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-grow: 1;
 }
 
 .menu {
@@ -97,10 +104,16 @@ body {
 }
 
 .site-logo {
+  display: flex;
+  align-items: center;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.11;
   letter-spacing: -0.03em;
+}
+
+.site-logo-icon {
+  margin-left: 4px;
 }
 
 .menu-link {
@@ -108,20 +121,46 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: -0.02em;
+  transition: color 250ms linear;
 }
 
 .menu-link:hover,
 .menu-link:focus {
   color: #fd9222;
 }
+
+.social-list {
+  display: flex;
+  column-gap: 18px;
+}
+
+.social-list-link {
+  display: block;
+  fill: none;
+  stroke: #111111;
+  line-height: 0;
+  transition: stroke 250ms linear;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  stroke: #fd9222;
+}
+
 /* ================ /PAGE HEADER STYLES ================ */
 
 /* ================ HERO STYLES ================ */
 .hero-section {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 381px;
   padding-bottom: 40px;
   color: #ffffff;
   background-color: #1e1823;
+  background-image: linear-gradient(#1e182366, #1e182366), url('../images/hero/bg.jpg');
+  background-size: cover;
+  border-radius: 30px;
   margin-bottom: 72px;
 }
 
@@ -154,6 +193,7 @@ body {
   color: #ffffff;
   border: none;
   border-radius: 100px;
+  transition: color 250ms linear, background-color 250ms linear;
 }
 
 .buy-now-btn:hover,
@@ -171,6 +211,7 @@ body {
   text-align: center;
   border: 1px solid #ffffff;
   border-radius: 100px;
+  transition: color 250ms linear, border-color 250ms linear;
 }
 
 .how-made-link:hover,
@@ -180,16 +221,40 @@ body {
 }
 
 .scroll-down-link {
-  margin-left: auto;
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.3;
   letter-spacing: -0.03em;
+  margin-left: auto;
+
+  transition: color 250ms linear;
 }
 
 .scroll-down-link:hover,
 .scroll-down-link:focus {
   color: #fd9222;
+}
+
+.scroll-down-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  fill: #fd9222;
+
+  transition: background-color 250ms linear, fill 250ms linear;
+}
+
+.scroll-down-link:hover .scroll-down-icon-wrapper,
+.scroll-down-link:focus .scroll-down-icon-wrapper {
+  background-color: #fd9222;
+  fill: #ffffff;
 }
 /* ================ /HERO STYLES ================ */
 
@@ -208,7 +273,30 @@ body {
 }
 
 .benefits-list-item {
+  position: relative;
   width: calc((100% - 2 * 88px) / 3);
+}
+
+.benefits-list-item:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  width: 1px;
+  height: 124px;
+  transform: translateY(-50%);
+  background-color: #ffffff80;
+  content: '';
+}
+
+.benefits-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 62px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  margin-bottom: 22px;
 }
 
 .benefits-list-title {
@@ -250,11 +338,13 @@ body {
 }
 
 .ingredients-list-item {
+  position: relative;
   width: calc((100% - 3 * 24px) / 4);
   padding: 28px 32px;
   border: 1px solid #fd9222;
   border-radius: 15px;
   background-color: #ffffff;
+  overflow: hidden;
 }
 
 .ingredients-list-item:nth-child(4n + 1) {
@@ -279,6 +369,60 @@ body {
   letter-spacing: -0.02em;
   text-transform: uppercase;
 }
+
+.ingredient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #111111;
+  border-radius: 15px;
+  overflow-y: auto;
+  transform: translateY(100%);
+  transition: transform 250ms linear;
+}
+
+.ingredients-list-item:hover .ingredient-overlay {
+  transform: translateY(0%);
+}
+
+.ingredient-overlay-title {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.ingredient-overlay-categories {
+  display: flex;
+  margin-bottom: 14px;
+  column-gap: 6px;
+}
+
+.ingredient-overlay-categories-item {
+  font-size: 10px;
+  line-height: 1.2;
+  border: 1px solid #fd9222;
+  border-radius: 35px;
+  padding: 5px 16px;
+  background-color: #fafafa;
+}
+
+.ingredient-overlay-categories-item:first-child {
+  background-color: #fd9222;
+  color: #ffffff;
+}
+
+.ingredient-overlay-description {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+
 /* ================ /INGREDIENTS STYLES ================ */
 
 /* ================ HOW MADE STYLES ================ */
@@ -311,9 +455,23 @@ body {
 }
 
 .how-made-list-item {
+  position: relative;
   font-size: 14px;
   line-height: 1.3;
   letter-spacing: -0.02em;
+  padding-left: 16px;
+}
+
+.how-made-list-item::before {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #eceded;
+  border-radius: 50%;
+  background-color: #4c4c4c;
+  content: '';
 }
 
 .how-made-list-item:not(:last-child) {
@@ -337,12 +495,20 @@ body {
 }
 
 .reviews-list-item {
+  position: relative;
   width: calc((100% - 28px * 2) / 3);
   border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: 15px;
   box-shadow: 0 9px 100px 0 rgba(17, 17, 17, 0.03);
   background-color: #ffffff;
   padding: 56px 24px 24px 24px;
+}
+
+.reviews-list-avatar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .reviews-list-fullname {
@@ -372,6 +538,7 @@ body {
   padding: 14px 40px;
   margin-left: auto;
   margin-right: auto;
+  transition: color 250ms linear, background-color 250ms linear;
 }
 
 .leave-review-btn:hover,
@@ -422,6 +589,7 @@ body {
   font-size: 14px;
   line-height: 1.3;
   letter-spacing: -0.02em;
+  transition: color 250ms linear;
 }
 
 .contact-list-link:hover,
