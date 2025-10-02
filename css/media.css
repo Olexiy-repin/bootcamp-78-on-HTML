@@ -1,0 +1,84 @@
+body {
+  background-color: teal;
+}
+
+/* ========== MIN-WIDTH & MAX-WIDTH ========== */
+
+/* 400px+ */
+/* @media (min-width: 400px) {
+  body {
+    background-color: tomato;
+  }
+} */
+
+/* 768px+ */
+/* @media (min-width: 768px) {
+  body {
+    background-color: aqua;
+  }
+} */
+
+/* 0px - 1023px */
+/* @media (max-width: 1023px) {
+  body {
+    background-color: aqua;
+  }
+} */
+
+/* 0px - 767px */
+/* @media (max-width: 767px) {
+  body {
+    background-color: tomato;
+  }
+} */
+
+/* ========== TYPES ========== */
+/* 
+  all
+  screen 
+  print
+*/
+
+/* @media print {
+  .menu {
+    display: none;
+  }
+
+  .hero-btn,
+  .section-btn {
+    display: none;
+  }
+
+  .page-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+} */
+
+/* ========== AND ========== */
+
+/* 
+768px+ - true
+0px - 1199px - true
+*/
+/* @media (min-width: 768px) and (max-width: 1199px) {
+  body {
+    background-color: aqua;
+  }
+} */
+
+/* ========== OR ========== */
+
+/* 
+0px - 767px - false
+1200px+ - false
+*/
+/* @media (max-width: 767px), (min-width: 1200px) {
+  body {
+    background-color: aqua;
+  }
+} */
