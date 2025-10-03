@@ -27,7 +27,7 @@
         <nav class="page-nav">
           <a class="site-logo" href="./index.html">
             <i>SIMPLY</i>&nbsp;CHOCOLATE
-            <svg class="site-logo-icon" width="24" height="24">
+            <svg class="site-logo-icon">
               <use href="./images/icons.svg#icon-page-logo"></use>
             </svg>
           </a>
@@ -43,6 +43,11 @@
             </li>
           </ul>
         </nav>
+        <button class="mobile-menu-open-btn" type="button">
+          <svg class="mobile-menu-open-btn-icon" width="28" height="28">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
         <ul class="social-list">
           <li class="social-list-item">
             <a href="" class="social-list-link">
@@ -363,7 +368,7 @@
     </footer>
 
     <!-- BACKDROP WITH MODAL -->
-    <div class="backdrop is-open">
+    <div class="backdrop">
       <div class="modal">
         <button class="modal-close-btn" type="button">
           <svg class="modal-close-btn-icon" width="28" height="28">
@@ -436,6 +441,46 @@
           </div>
           <button class="review-form-submit-btn" type="submit">Send</button>
         </form>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+      <div class="container mobile-menu-container">
+        <button class="mobile-menu-close-btn" type="button">
+          <svg class="mobile-menu-close-btn-icon" width="28" height="28">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav class="mobile-menu-nav">
+          <ul class="mobile-menu-nav-list">
+            <li class="mobile-menu-nav-list-item">
+              <a class="mobile-menu-nav-list-link" href="./index.html">Home</a>
+            </li>
+            <li class="mobile-menu-nav-list-item">
+              <a class="mobile-menu-nav-list-link" href="#making-process">How it’s made?</a>
+            </li>
+            <li class="mobile-menu-nav-list-item">
+              <a class="mobile-menu-nav-list-link" href="#reviews">Chocolate is loved</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="mobile-menu-social-list">
+          <li class="mobile-menu-social-list-item">
+            <a href="" class="mobile-menu-social-list-link">
+              <svg class="mobile-menu-social-list-icon" width="22" height="22">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu-social-list-item">
+            <a href="" class="mobile-menu-social-list-link">
+              <svg class="mobile-menu-social-list-icon" width="22" height="22">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </body>
